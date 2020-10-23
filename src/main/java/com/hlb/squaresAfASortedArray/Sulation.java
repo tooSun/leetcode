@@ -17,7 +17,9 @@ public class Sulation {
 
 //		System.out.println(Arrays.toString(f1(A)));
 
-		System.out.println(Arrays.toString(f2(A)));
+//		System.out.println(Arrays.toString(f2(A)));
+
+		System.out.println(Arrays.toString(f3(A)));
 
 	}
 
@@ -38,6 +40,12 @@ public class Sulation {
 		return A;
 	}
 
+	/**
+	 * 双指针排序
+	 *
+	 * @param A
+	 * @return
+	 */
 	public static int[] f2(int[] A) {
 		if(null == A) {
 			return null;
@@ -70,6 +78,32 @@ public class Sulation {
 				i --;
 			}
 			index ++;
+		}
+
+		return ans;
+	}
+
+	/**
+	 * 双指针
+	 *
+	 * @param A
+	 * @return
+	 */
+	public static int[] f3(int[] A) {
+		if(null == A) {
+			return null;
+		}
+		int len = A.length;
+		int[] ans = new int[len];
+		for(int i = 0, j = len - 1, pos = len - 1; i <= j;) {
+			if(A[i] * A[i] > A[j] * A[j]) {
+				ans[pos] = A[i] * A[i];
+				i++;
+			} else {
+				ans[pos] = A[j] * A[j];
+				j--;
+			}
+			pos--;
 		}
 
 		return ans;

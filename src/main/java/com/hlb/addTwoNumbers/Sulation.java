@@ -1,5 +1,7 @@
 package com.hlb.addTwoNumbers;
 
+import com.hlb.dataStructure.ListNode;
+
 /**
  * 两数相加
  *
@@ -62,32 +64,6 @@ public class Sulation {
 		}
 
 		return head.next;
-	}
-
-	public static class ListNode {
-
-		private int val;
-		private ListNode next;
-
-		public ListNode(int val) {
-			this.val = val;
-		}
-
-		public int getVal() {
-			return val;
-		}
-
-		public void setVal(int val) {
-			this.val = val;
-		}
-
-		public ListNode getNext() {
-			return next;
-		}
-
-		public void setNext(ListNode next) {
-			this.next = next;
-		}
 	}
 
 }
